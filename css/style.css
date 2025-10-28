@@ -43,7 +43,7 @@
     .game-01 
     {
       position: relative;
-      width: min(600px, 90vw);
+      width: min(900px, 90vw);
       aspect-ratio: 1200 / 676;
       border-radius: 16px;
       overflow: hidden;
@@ -153,6 +153,13 @@
       color: #fff;
       z-index: 10;
     }
+
+@media (max-width: 1400px){
+  .game-01 
+    {
+      width: min(600px, 90vw);      
+    }
+}
 
 @media (max-width: 640px){
   .game-01 .btn
