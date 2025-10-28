@@ -8,28 +8,49 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
 
     body {
       font-family: 'Nunito', system-ui, sans-serif;
       color: var(--ink);
       background: #000;
       display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header
+    {
+      padding: 20px 0;
+      display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
+    }
+
+    main 
+    {
+      flex: 1; /* ocupa o espaço restante */
+      display: flex;
+      align-items: center; /* centraliza verticalmente */
+      justify-content: center; /* centraliza horizontalmente */
+      width: 100%;
     }
 
     /* ====== Container do jogo ====== */
-    .game-01 {
+    .game-01 
+    {
       position: relative;
-      width: min(800px, 90vw);
+      width: min(600px, 90vw);
       aspect-ratio: 1200 / 676;
       border-radius: 16px;
       overflow: hidden;
       box-shadow: var(--shadow);
       background: #fff;
       cursor: pointer;
+      margin-top: -100px;
     }
 
     .game-01 img {
@@ -53,10 +74,10 @@
 
     .game-01 .btn {
       position: absolute;
-      bottom: 30%;
-      left: calc(50% - 30px);
-      width: 60px;
-      height: 60px;
+      bottom: 25%;
+      left: calc(50% - 40px);
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -132,3 +153,19 @@
       color: #fff;
       z-index: 10;
     }
+
+@media (max-width: 640px){
+  .game-01 .btn
+  {
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 60px;
+    bottom: 20%;
+  }
+  .close-btn {
+    max-width: 50px;
+    top: 5px;
+    left: 5px;
+    font-size: 1rem; 
+  }
+}
