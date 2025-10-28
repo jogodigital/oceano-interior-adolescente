@@ -1,0 +1,135 @@
+:root {
+      --sky-top: #b8e3ff;
+      --sky-mid: #8ed0ff;
+      --sun: #ffe066;
+      --ink: #14213d;
+      --muted: #6582a6;
+      --shadow: 0 10px 30px rgba(17, 37, 64, .12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+
+    body {
+      font-family: 'Nunito', system-ui, sans-serif;
+      color: var(--ink);
+      background: rgba(255,255,255,.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* ====== Container do jogo ====== */
+    .game-01 {
+      position: relative;
+      width: min(800px, 90vw);
+      aspect-ratio: 1200 / 676;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .game-01 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .game-01 .badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: crimson;
+      color: #fff;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+
+    .game-01 .btn {
+      position: absolute;
+      bottom: 30%;
+      left: calc(50% - 30px);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #40aefb 0%, #75c6ff 100%);
+      border: 3px solid white;
+      box-shadow: var(--shadow);
+      transition: transform .2s ease;
+    }
+
+    .game-01 .btn:hover {
+      transform: scale(1.2);
+    }
+
+    .game-01 svg {
+      width: 60px;
+      height: 60px;
+      color: white;
+    }
+
+    /* ====== Modal ====== */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      background: rgba(0,0,0,0.6);
+      border: none;
+      border-radius: 8px;
+      padding: 5px 12px;
+      cursor: pointer;
+      z-index: 10000;
+    }
+
+    .close-btn:hover {
+      background: rgba(255,0,0,0.8);
+    }
+
+    #gameFrame {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ====== Rodapé ====== */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      background: rgba(255,255,255,.6);
+      padding: 6px 0;
+      border-top: 1px dashed rgba(0,0,0,.08);
+      font-size: 0.9rem;
+      color: var(--muted);
+      z-index: 10;
+    }
