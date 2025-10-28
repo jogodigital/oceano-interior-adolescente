@@ -13,7 +13,7 @@
     body {
       font-family: 'Nunito', system-ui, sans-serif;
       color: var(--ink);
-      background: rgba(255,255,255,.6);
+      background: #000;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -125,11 +125,10 @@
       bottom: 0;
       left: 0;
       right: 0;
-      text-align: center;
-      background: rgba(255,255,255,.6);
+      text-align: center;      
       padding: 6px 0;
       border-top: 1px dashed rgba(0,0,0,.08);
       font-size: 0.9rem;
-      color: var(--muted);
+      color: #fff;
       z-index: 10;
     }
