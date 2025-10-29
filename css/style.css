@@ -161,13 +161,21 @@
   }
 }
 @media (max-width: 980px){
+  .header
+  {
+    padding: 15px 0;
+  }
   .header img
   {
     width: 100px;
   }
+  main
+  {
+    margin-top: 30px;
+  }
   .game-01 
   {
-    width: min(300px, 90vw);      
+    width: min(300px, 90vw);   
   }
   .game-01 .btn
   {
@@ -184,6 +192,14 @@
   }
 }
 @media (max-width: 640px){
+  .header
+  {
+    padding-top: 50px;
+  }
+  .header img
+  {
+    width: 190px;
+  }
   .game-01 .btn
   {
     left: calc(50% - 30px);
